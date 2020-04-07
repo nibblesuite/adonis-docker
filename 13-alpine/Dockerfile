@@ -1,3 +1,5 @@
 FROM node:13-alpine
-
-RUN npm i -g @adonisjs/cli
+WORKDIR /app
+RUN apk add git && npm i -g @adonisjs/cli
+ENTRYPOINT ["adonis"]
+CMD [""]
